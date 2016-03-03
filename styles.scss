@@ -2,7 +2,7 @@
 @include j-edit;
 
 section {
- @include center;
+ @include j-center;
 }
 article {
  @include col(1/3);
