@@ -5,39 +5,60 @@
 @import "neat/neat";
 
 body {
-	font: 14px/1.4 'Raleway', sans-serif;
+  margin: 0;
+  font: 14px/1.4 'Raleway', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	margin: 0;
-	font-weight: 700;
+  margin: 0;
+  font-weight: 700;
+  line-height: 1;
+}
+
+p {
+  margin: 0;
 }
 
 ul {
-	padding: 0;
-}
-
-section {
-	@include outer-container(100%);
-
-	article{
-		ul li {
-		  @include span-columns(3);
-		  border: 1px solid #ccc;
-		  padding: 2.5%;
-		}
-	}
-
-	article:nth-of-type(odd){
-		background: #f5f5f5;
-	}
-
-	article:nth-of-type(even){
-		background: #efefef;
-	}
+  padding: 0;
 }
 
 header, article, footer {
-	@include row();
-	padding: 5%;
+  @include row();
+  padding: 2.5% 5%;
+}
+
+section {
+  @include outer-container(100%);
+
+  article{
+
+    @include row();
+    padding: 5%;
+
+    ul li {
+      background: #ccc;
+      padding: 5%;
+      list-style-type: none;
+      margin-bottom: 1px;
+
+      @include media(480px){
+        @include span-columns(4);
+        padding: 5%;
+      }
+
+      @include media(769px){
+        @include span-columns(3);
+        padding: 2.5%;
+      }
+    }
+  }
+
+  article:nth-of-type(odd){
+    background: #f5f5f5;
+  }
+
+  article:nth-of-type(even){
+    background: #efefef;
+  }
 }
