@@ -1,2 +1,9 @@
 @import 'jeet/jeet';
 @include j-edit;
+
+section {
+ @include center;
+}
+article {
+ @include col(1/3);
+}
