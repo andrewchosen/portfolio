@@ -1,6 +1,8 @@
-﻿@import "bourbon/bourbon";
+﻿/* ›Created by Andrew Lancaster‹ */
+
+@import "bourbon/bourbon";
 @import "neat/neat";
 
-section {
-  @include span-columns(6);
+article ul li {
+  @include span-columns(3);
 } 

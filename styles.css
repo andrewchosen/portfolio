@@ -1,15 +1,17 @@
+@charset "UTF-8";
+/* ›Created by Andrew Lancaster‹ */
 html {
   box-sizing: border-box; }
 
 *, *::after, *::before {
   box-sizing: inherit; }
 
-section {
+article ul li {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 48.82117%; }
-  section:last-child {
+  width: 23.23176%; }
+  article ul li:last-child {
     margin-right: 0; }
 
 /*# sourceMappingURL=styles.css.map */
