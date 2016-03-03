@@ -1,8 +1,43 @@
 ﻿/* ›Created by Andrew Lancaster‹ */
 
 @import "bourbon/bourbon";
+@import "grid-settings";
 @import "neat/neat";
 
-article ul li {
-  @include span-columns(3);
-} 
+body {
+	font: 14px/1.4 'Raleway', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-weight: 700;
+}
+
+ul {
+	padding: 0;
+}
+
+section {
+	@include outer-container(100%);
+
+	article{
+		ul li {
+		  @include span-columns(3);
+		  border: 1px solid #ccc;
+		  padding: 2.5%;
+		}
+	}
+
+	article:nth-of-type(odd){
+		background: #f5f5f5;
+	}
+
+	article:nth-of-type(even){
+		background: #efefef;
+	}
+}
+
+header, article, footer {
+	@include row();
+	padding: 5%;
+}

@@ -6,12 +6,44 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-article ul li {
-  float: left;
+body {
+  font: 14px/1.4 'Raleway', sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 700; }
+
+ul {
+  padding: 0; }
+
+section {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  section::after {
+    clear: both;
+    content: "";
+    display: table; }
+  section article ul li {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 25%;
+    border: 1px solid #ccc;
+    padding: 2.5%; }
+    section article ul li:last-child {
+      margin-right: 0; }
+  section article:nth-of-type(odd) {
+    background: #f5f5f5; }
+  section article:nth-of-type(even) {
+    background: #efefef; }
+
+header, article, footer {
   display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%; }
-  article ul li:last-child {
-    margin-right: 0; }
+  padding: 5%; }
+  header::after, article::after, footer::after {
+    clear: both;
+    content: "";
+    display: table; }
 
 /*# sourceMappingURL=styles.css.map */
