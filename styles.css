@@ -39,7 +39,7 @@ section {
     display: table; }
   section article {
     display: block;
-    padding: 5%; }
+    padding: 5% 5% 2.14286% 5%; }
     section article::after {
       clear: both;
       content: "";
@@ -48,28 +48,72 @@ section {
       background: #ccc;
       padding: 5%;
       list-style-type: none;
-      margin-bottom: 1px; }
-      @media screen and (min-width: 480px) {
+      margin-bottom: 2.85714%;
+      min-height: 300px;
+      position: relative;
+      box-shadow: 0px 0px 6px #ccc; }
+      section article ul li div {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.95);
+        width: 100%;
+        padding: 20px;
+        color: #111;
+        text-align: center;
+        display: none; }
+        section article ul li div a {
+          background: #ff5500;
+          padding: 8px 12px;
+          border-radius: 2px;
+          color: #FFF;
+          display: inline-block;
+          text-decoration: none;
+          margin-top: 10px;
+          transition: background .5s; }
+          section article ul li div a:hover {
+            background: #dd4400; }
+      section article ul li.nuvair {
+        background: url("images/nuvair.jpg"); }
+      section article ul li.xfmuscle {
+        background: url("images/xfmuscle.jpg"); }
+      section article ul li.mma-freak {
+        background: url("images/mma-freak.jpg"); }
+      section article ul li.hcl {
+        background: url("images/hcl.jpg"); }
+      section article ul li.liftedup {
+        background: url("images/liftedup.jpg"); }
+      section article ul li.jobapp {
+        background: url("images/jobapp.jpg"); }
+      section article ul li.angular1 {
+        background: url("images/angular1.jpg"); }
+      section article ul li.angular2 {
+        background: url("images/angular2.jpg"); }
+      section article ul li.codeigniter {
+        background: url("images/codeigniter.jpg"); }
+      section article ul li.portfolio {
+        background: url("images/portfolio.jpg"); }
+      @media screen and (min-width: 600px) {
         section article ul li {
           float: left;
           display: block;
-          margin-right: 0%;
-          width: 33.33333%;
+          margin-right: 2.85714%;
+          width: 31.42857%;
           padding: 5%; }
           section article ul li:last-child {
             margin-right: 0; } }
-      @media screen and (min-width: 769px) {
+      @media screen and (min-width: 900px) {
         section article ul li {
           float: left;
           display: block;
-          margin-right: 0%;
-          width: 25%;
+          margin-right: 2.85714%;
+          width: 22.85714%;
           padding: 2.5%; }
           section article ul li:last-child {
             margin-right: 0; } }
-  section article:nth-of-type(odd) {
-    background: #f5f5f5; }
-  section article:nth-of-type(even) {
-    background: #efefef; }
+    section article:nth-of-type(odd) {
+      background: #f5f5f5; }
+    section article:nth-of-type(even) {
+      background: #efefef; }
 
 /*# sourceMappingURL=styles.css.map */
