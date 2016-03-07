@@ -116,11 +116,21 @@ section {
       @include media(600px){
         @include span-columns(4);
         padding: 5%;
+        &:nth-of-type(3){
+          margin-right: 0;
+        }
       }
 
       @include media(900px){
         @include span-columns(3);
         padding: 2.5%;
+        &:nth-of-type(3){
+          margin-right: 2.85714%;
+        }
+        &:nth-of-type(4){
+          margin-right: 0;
+        }
+
       }
     }
 
