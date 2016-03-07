@@ -9,6 +9,15 @@ body {
   font: 14px/1.4 'Raleway', sans-serif;
 }
 
+header, footer {
+  z-index: 1;
+  position: relative;
+  box-shadow: 0px 0px 6px #ccc;
+  h1 {
+    color: #ff5500;
+  }
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: 700;
@@ -44,6 +53,7 @@ section {
       min-height: 300px;
       position: relative;
       box-shadow: 0px 0px 6px #ccc;
+      transition: height .5s linear;
 
       div {
         position: absolute;
@@ -64,7 +74,7 @@ section {
           display: inline-block;
           text-decoration: none;
           margin-top: 10px;
-          transition: background .5s;
+          transition: background .1s;
 
           &:hover {
             background: #dd4400;
