@@ -93,18 +93,30 @@ section {
         background: url("images/codeigniter.jpg"); }
       section article ul li.portfolio {
         background: url("images/portfolio.jpg"); }
-      @media screen and (min-width: 600px) {
+      @media screen and (min-width: 550px) {
         section article ul li {
           float: left;
           display: block;
           margin-right: 2.85714%;
-          width: 31.42857%;
+          width: 48.57143%;
           padding: 5%; }
           section article ul li:last-child {
             margin-right: 0; }
+          section article ul li:nth-of-type(2) {
+            margin-right: 0; } }
+      @media screen and (min-width: 778px) {
+        section article ul li {
+          float: left;
+          display: block;
+          margin-right: 2.85714%;
+          width: 31.42857%; }
+          section article ul li:last-child {
+            margin-right: 0; }
+          section article ul li:nth-of-type(2) {
+            margin-right: 2.85714%; }
           section article ul li:nth-of-type(3) {
             margin-right: 0; } }
-      @media screen and (min-width: 900px) {
+      @media screen and (min-width: 1200px) {
         section article ul li {
           float: left;
           display: block;
