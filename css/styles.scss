@@ -1,8 +1,88 @@
-﻿/* ›Created by Andrew Lancaster‹ */
+﻿/* 
+  ›Adventurer.io‹ v0.1.0
+  Created by Andrew Lancaster */
 
 @import "bourbon/bourbon";
 @import "grid-settings";
 @import "neat/neat";
+
+/*
+Flaticon icon font: Social Icons
+*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./fonts/Flaticon.eot");
+  src: url("./fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./fonts/Flaticon.woff") format("woff"),
+       url("./fonts/Flaticon.ttf") format("truetype"),
+       url("./fonts/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./fonts/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+header {
+  ul {
+
+    margin: 0;
+
+    .icon {
+
+      list-style-type: none;
+      margin-left: 10px;
+      margin-top: 6px;
+      display: inline-block;
+
+      @include media(550px){
+        float: right;
+      }
+
+      a {
+        text-indent: -99999px;
+        display: inline-block;
+        position: relative;
+        width: 34px;
+        height: 34px;
+      }
+
+      &:before{
+        display: inline-block;
+        position: absolute;
+        font-family: "Flaticon";
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        font-size: 34px;
+        line-height: 1;
+        text-decoration: inherit;
+        text-rendering: optimizeLegibility;
+        text-transform: none;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        font-smoothing: antialiased;
+      }
+    }
+  }
+
+  .facebook:before { content: "\f100"; color: #3B5998; }
+  .github:before { content: "\f101"; color: #171515; }
+  .linkedin:before { content: "\f102"; color: #4875B4; }
+  .google:before { content: "\f103"; color: #C63D2D; }
+  .twitter:before { content: "\f104"; color: #4099FF; }
+        
+  $font-facebook: "\f100";
+  $font-github: "\f101";
+  $font-linkedin: "\f102";
+  $font-social: "\f103";
+  $font-twitter: "\f104";
+}
 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
@@ -21,7 +101,9 @@ header, footer {
   position: relative;
   box-shadow: 0px 0px 6px #ccc;
   h1 {
+    line-height: 1;
     position: relative;
+    margin-bottom: 6px;
     margin-left: 60px;
     color: #ff5500;
     &::before {
@@ -29,10 +111,11 @@ header, footer {
       transform: rotate(90deg);
       position: absolute;
       left: -60px;
-      top: 6px;
+      top: -2px;
       color: #fff;
       background: #FF5500;
-      line-height: 1.8;
+      line-height: 1.9;
+      font-size: 1.3em;
       height: 50px;
       width: 50px;
       text-align: center;
@@ -60,6 +143,12 @@ ul {
 header, article, footer {
   @include row();
   padding: 2.5% 5%;
+}
+
+section#logo, header ul {
+  @include media(550px){
+    @include span-columns(6);
+  }
 }
 
 section#main {
@@ -116,43 +205,43 @@ section#main {
       }
 
       &.nuvair {
-        background: url('images/nuvair.jpg');
+        background: url('../images/nuvair.jpg');
       }
 
       &.xfmuscle {
-        background: url('images/xfmuscle.jpg');
+        background: url('../images/xfmuscle.jpg');
       }
 
       &.mma-freak {
-        background: url('images/mma-freak.jpg');
+        background: url('../images/mma-freak.jpg');
       }
 
       &.hcl {
-        background: url('images/hcl.jpg');
+        background: url('../images/hcl.jpg');
       }
 
       &.liftedup {
-        background: url('images/liftedup.jpg');
+        background: url('../images/liftedup.jpg');
       }
 
       &.jobapp {
-        background: url('images/jobapp.jpg');
+        background: url('../images/jobapp.jpg');
       }
 
       &.angular1 {
-        background: url('images/angular1.jpg');
+        background: url('../images/angular1.jpg');
       }
 
       &.angular2 {
-        background: url('images/angular2.jpg');
+        background: url('../images/angular2.jpg');
       }
 
       &.codeigniter {
-        background: url('images/codeigniter.jpg');
+        background: url('../images/codeigniter.jpg');
       }
 
       &.portfolio {
-        background: url('images/portfolio.jpg');
+        background: url('../images/portfolio.jpg');
       }
 
       @include media(550px){
