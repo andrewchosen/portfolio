@@ -4,6 +4,13 @@
 @import "grid-settings";
 @import "neat/neat";
 
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
 body {
   margin: 0;
   font: 14px/1.4 'Raleway', sans-serif;
@@ -29,6 +36,7 @@ header, footer {
       height: 50px;
       width: 50px;
       text-align: center;
+      @include border-radius(3px);
     }
   }
   p {
@@ -76,7 +84,7 @@ section#main {
         position: absolute;
         bottom: 0;
         left: 0;
-        background: rgba(255,255,255,.95);
+        background: #fff;
         width: 100%;
         padding: 20px;
         color: #111;
@@ -90,8 +98,8 @@ section#main {
 
         a {
           background: #ff5500;
-          padding: 8px 12px;
-          border-radius: 2px;
+          padding: 8px 24px;
+          @include border-radius(2px);
           color: #FFF;
           display: inline-block;
           text-decoration: none;
