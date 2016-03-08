@@ -1,10 +1,72 @@
 @charset "UTF-8";
-/* ›Created by Andrew Lancaster‹ */
+/* 
+  ›Adventurer.io‹ v0.1.0
+  Created by Andrew Lancaster */
 html {
   box-sizing: border-box; }
 
 *, *::after, *::before {
   box-sizing: inherit; }
+
+/*
+Flaticon icon font: Social Icons
+*/
+@font-face {
+  font-family: "Flaticon";
+  src: url("./fonts/Flaticon.eot");
+  src: url("./fonts/Flaticon.eot?#iefix") format("embedded-opentype"), url("./fonts/Flaticon.woff") format("woff"), url("./fonts/Flaticon.ttf") format("truetype"), url("./fonts/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./fonts/Flaticon.svg#Flaticon") format("svg"); } }
+header ul {
+  margin: 0; }
+  header ul .icon {
+    list-style-type: none;
+    margin-left: 10px;
+    margin-top: 6px;
+    display: inline-block; }
+    @media screen and (min-width: 550px) {
+      header ul .icon {
+        float: right; } }
+    header ul .icon a {
+      text-indent: -99999px;
+      display: inline-block;
+      position: relative;
+      width: 34px;
+      height: 34px; }
+    header ul .icon:before {
+      display: inline-block;
+      position: absolute;
+      font-family: "Flaticon";
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      font-size: 34px;
+      line-height: 1;
+      text-decoration: inherit;
+      text-rendering: optimizeLegibility;
+      text-transform: none;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      font-smoothing: antialiased; }
+header .facebook:before {
+  content: "\f100";
+  color: #3B5998; }
+header .github:before {
+  content: "\f101";
+  color: #171515; }
+header .linkedin:before {
+  content: "\f102";
+  color: #4875B4; }
+header .google:before {
+  content: "\f103";
+  color: #C63D2D; }
+header .twitter:before {
+  content: "\f104";
+  color: #4099FF; }
 
 body {
   margin: 0;
@@ -15,7 +77,9 @@ header, footer {
   position: relative;
   box-shadow: 0px 0px 6px #ccc; }
   header h1, footer h1 {
+    line-height: 1;
     position: relative;
+    margin-bottom: 6px;
     margin-left: 60px;
     color: #ff5500; }
     header h1::before, footer h1::before {
@@ -23,10 +87,11 @@ header, footer {
       transform: rotate(90deg);
       position: absolute;
       left: -60px;
-      top: 6px;
+      top: -2px;
       color: #fff;
       background: #FF5500;
-      line-height: 1.8;
+      line-height: 1.9;
+      font-size: 1.3em;
       height: 50px;
       width: 50px;
       text-align: center;
@@ -54,6 +119,15 @@ header, article, footer {
     clear: both;
     content: "";
     display: table; }
+
+@media screen and (min-width: 550px) {
+  section#logo, header ul {
+    float: left;
+    display: block;
+    margin-right: 2.85714%;
+    width: 48.57143%; }
+    section#logo:last-child, header ul:last-child {
+      margin-right: 0; } }
 
 section#main {
   max-width: 100%;
@@ -108,25 +182,25 @@ section#main {
           section#main article ul li div a:hover {
             background: #dd4400; }
       section#main article ul li.nuvair {
-        background: url("images/nuvair.jpg"); }
+        background: url("../images/nuvair.jpg"); }
       section#main article ul li.xfmuscle {
-        background: url("images/xfmuscle.jpg"); }
+        background: url("../images/xfmuscle.jpg"); }
       section#main article ul li.mma-freak {
-        background: url("images/mma-freak.jpg"); }
+        background: url("../images/mma-freak.jpg"); }
       section#main article ul li.hcl {
-        background: url("images/hcl.jpg"); }
+        background: url("../images/hcl.jpg"); }
       section#main article ul li.liftedup {
-        background: url("images/liftedup.jpg"); }
+        background: url("../images/liftedup.jpg"); }
       section#main article ul li.jobapp {
-        background: url("images/jobapp.jpg"); }
+        background: url("../images/jobapp.jpg"); }
       section#main article ul li.angular1 {
-        background: url("images/angular1.jpg"); }
+        background: url("../images/angular1.jpg"); }
       section#main article ul li.angular2 {
-        background: url("images/angular2.jpg"); }
+        background: url("../images/angular2.jpg"); }
       section#main article ul li.codeigniter {
-        background: url("images/codeigniter.jpg"); }
+        background: url("../images/codeigniter.jpg"); }
       section#main article ul li.portfolio {
-        background: url("images/portfolio.jpg"); }
+        background: url("../images/portfolio.jpg"); }
       @media screen and (min-width: 550px) {
         section#main article ul li {
           float: left;
