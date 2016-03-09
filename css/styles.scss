@@ -33,7 +33,7 @@ header {
     text-align: center;
     margin: 10px 0 0 0;
     padding-top: 10px;
-    border-top: 1px solid #ddd;
+    border-top: 1px dotted #ddd;
 
     @include media(550px){
       margin-top: 0;
@@ -78,19 +78,19 @@ header {
       }
     }
   }
-
-  .facebook:before { content: "\f100"; color: #3B5998; }
-  .github:before { content: "\f101"; color: #171515; }
-  .linkedin:before { content: "\f102"; color: #4875B4; }
-  .google:before { content: "\f103"; color: #C63D2D; }
-  .twitter:before { content: "\f104"; color: #4099FF; }
-        
-  $font-facebook: "\f100";
-  $font-github: "\f101";
-  $font-linkedin: "\f102";
-  $font-social: "\f103";
-  $font-twitter: "\f104";
 }
+
+.facebook:before { content: "\f100"; color: #3B5998; }
+.github:before { content: "\f101"; color: #171515; }
+.linkedin:before { content: "\f102"; color: #4875B4; }
+.google:before { content: "\f103"; color: #C63D2D; }
+.twitter:before { content: "\f104"; color: #4099FF; }
+       
+$font-facebook: "\f100";
+$font-github: "\f101";
+$font-linkedin: "\f102";
+$font-social: "\f103";
+$font-twitter: "\f104";
 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
@@ -133,16 +133,17 @@ header, footer {
         transform: rotate(90deg);
         position: absolute;
         left: -50px;
-        top: -2px;
+        top: 2px;
         color: #fff;
         background: #FF5500;
-        line-height: 1.6;
+        line-height: 1.5;
         font-size: 1.3em;
         height: 40px;
         width: 40px;
         text-align: center;
         @include border-radius(3px);
         @include media(550px){
+          top: -2px;
           height: 50px;
           width: 50px;
           line-height: 1.9;
@@ -208,7 +209,7 @@ section#main {
       margin-bottom: 2.85714%;
       min-height: 300px;
       position: relative;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.15);
       transition: height .5s linear;
 
       div {
@@ -243,6 +244,33 @@ section#main {
 
           &:hover {
             background: #dd4400;
+          }
+
+          &.github-button{
+            background: #444;
+            border-color: #171515;
+            &:hover {
+              background: #171515;
+            }
+          .icon {
+            &::before{
+              display: inline-block;
+              font-family: "Flaticon";
+              font-style: normal;
+              font-weight: normal;
+              font-variant: normal;
+              line-height: 1;
+              text-decoration: inherit;
+              text-rendering: optimizeLegibility;
+              text-transform: none;
+              -moz-osx-font-smoothing: grayscale;
+              -webkit-font-smoothing: antialiased;
+              font-smoothing: antialiased;
+              color: #fff;
+              margin-right: 6px;
+            }
+          }  
+
           }
 
         }
