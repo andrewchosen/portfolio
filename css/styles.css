@@ -22,14 +22,23 @@ Flaticon icon font: Social Icons
     font-family: "Flaticon";
     src: url("./fonts/Flaticon.svg#Flaticon") format("svg"); } }
 header ul {
-  margin: 0; }
+  text-align: center;
+  margin: 10px 0 0 0;
+  padding-top: 10px;
+  border-top: 1px solid #ddd; }
+  @media screen and (min-width: 550px) {
+    header ul {
+      margin-top: 0;
+      padding-top: 0;
+      border: 0;
+      text-align: initial; } }
   header ul .icon {
     list-style-type: none;
     margin-left: 10px;
-    margin-top: 6px;
     display: inline-block; }
     @media screen and (min-width: 550px) {
       header ul .icon {
+        margin-top: 6px;
         float: right; } }
     header ul .icon a {
       text-indent: -99999px;
@@ -76,32 +85,50 @@ header, footer {
   z-index: 1;
   position: relative;
   box-shadow: 0px 0px 6px #ccc; }
-  header h1, footer h1 {
-    line-height: 1;
-    position: relative;
-    margin-bottom: 6px;
-    margin-left: 60px;
-    color: #ff5500;
-    text-transform: uppercase; }
-    header h1::before, footer h1::before {
-      content: "8)";
-      transform: rotate(90deg);
-      position: absolute;
-      left: -60px;
-      top: -2px;
-      color: #fff;
-      background: #FF5500;
-      line-height: 1.9;
-      font-size: 1.3em;
-      height: 50px;
-      width: 50px;
-      text-align: center;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      -ms-border-radius: 3px;
-      border-radius: 3px; }
-  header p, footer p {
-    margin-left: 60px; }
+  header #logo, footer #logo {
+    text-align: center; }
+    @media screen and (min-width: 550px) {
+      header #logo, footer #logo {
+        text-align: initial; } }
+    header #logo h1, footer #logo h1 {
+      line-height: 1;
+      display: inline-block;
+      position: relative;
+      margin-bottom: 6px;
+      margin-left: 40px;
+      color: #ff5500;
+      text-transform: uppercase; }
+      @media screen and (min-width: 550px) {
+        header #logo h1, footer #logo h1 {
+          margin-left: 60px; } }
+      header #logo h1::before, footer #logo h1::before {
+        content: "8)";
+        transform: rotate(90deg);
+        position: absolute;
+        left: -50px;
+        top: -2px;
+        color: #fff;
+        background: #FF5500;
+        line-height: 1.6;
+        font-size: 1.3em;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        border-radius: 3px; }
+        @media screen and (min-width: 550px) {
+          header #logo h1::before, footer #logo h1::before {
+            height: 50px;
+            width: 50px;
+            line-height: 1.9;
+            left: -60px; } }
+    header #logo p, footer #logo p {
+      margin-left: 40px; }
+      @media screen and (min-width: 550px) {
+        header #logo p, footer #logo p {
+          margin-left: 60px; } }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;

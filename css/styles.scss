@@ -30,17 +30,25 @@ Flaticon icon font: Social Icons
 
 header {
   ul {
+    text-align: center;
+    margin: 10px 0 0 0;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
 
-    margin: 0;
+    @include media(550px){
+      margin-top: 0;
+      padding-top: 0;
+      border: 0;
+      text-align: initial;
+    }
 
     .icon {
-
       list-style-type: none;
       margin-left: 10px;
-      margin-top: 6px;
       display: inline-block;
 
       @include media(550px){
+        margin-top: 6px;
         float: right;
       }
 
@@ -100,31 +108,56 @@ header, footer {
   z-index: 1;
   position: relative;
   box-shadow: 0px 0px 6px #ccc;
-  h1 {
-    line-height: 1;
-    position: relative;
-    margin-bottom: 6px;
-    margin-left: 60px;
-    color: #ff5500;
-    text-transform: uppercase;
-    &::before {
-      content: "8)";
-      transform: rotate(90deg);
-      position: absolute;
-      left: -60px;
-      top: -2px;
-      color: #fff;
-      background: #FF5500;
-      line-height: 1.9;
-      font-size: 1.3em;
-      height: 50px;
-      width: 50px;
-      text-align: center;
-      @include border-radius(3px);
+
+  #logo{
+
+    text-align: center;
+
+    @include media(550px){
+      text-align: initial;
     }
-  }
-  p {
-    margin-left: 60px;
+
+    h1 {
+      line-height: 1;
+      display: inline-block;
+      position: relative;
+      margin-bottom: 6px;
+      margin-left: 40px;
+      @include media(550px){
+        margin-left: 60px;
+      }
+      color: #ff5500;
+      text-transform: uppercase;
+      &::before {
+        content: "8)";
+        transform: rotate(90deg);
+        position: absolute;
+        left: -50px;
+        top: -2px;
+        color: #fff;
+        background: #FF5500;
+        line-height: 1.6;
+        font-size: 1.3em;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        @include border-radius(3px);
+        @include media(550px){
+          height: 50px;
+          width: 50px;
+          line-height: 1.9;
+          left: -60px;
+        }
+      }
+    }
+
+    p {
+      margin-left: 40px;
+      @include media(550px){
+        margin-left: 60px;
+      }
+    }
+
   }
 }
 
