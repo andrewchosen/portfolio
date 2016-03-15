@@ -211,7 +211,7 @@ section#main {
           margin-bottom: 10px;
           color: #999; }
         section#main article ul li div a {
-          background: #ff5500;
+          background: #FF5500;
           padding: 8px 24px;
           -webkit-border-radius: 2px;
           -moz-border-radius: 2px;
@@ -221,15 +221,21 @@ section#main {
           display: inline-block;
           text-decoration: none;
           margin-top: 10px;
-          transition: background .4s;
+          box-shadow: inset 0 0 0 0 #DD4400;
+          transition-duration: 0.7s;
+          -webkit-transition: 0.7s;
           border-bottom: 2px solid #cc4400; }
           section#main article ul li div a:hover {
-            background: #dd4400; }
+            background: #dd4400;
+            box-shadow: inset 0 100px 0 0 #DD4400;
+            transition-duration: 0.4s;
+            -webkit-transition: 0.4s; }
           section#main article ul li div a.github-button {
             background: #444;
-            border-color: #171515; }
+            border-color: #171515;
+            box-shadow: inset 0 0 0 0 #444; }
             section#main article ul li div a.github-button:hover {
-              background: #171515; }
+              box-shadow: inset 0 100px 0 0 #000; }
             section#main article ul li div a.github-button .icon::before {
               display: inline-block;
               font-family: "Flaticon";
@@ -265,6 +271,8 @@ section#main {
         background: url("../images/codeigniter.jpg"); }
       section#main article ul li.portfolio {
         background: url("../images/portfolio.jpg"); }
+      section#main article ul li.adventurer {
+        background: url("../images/adventurer.jpg"); }
       @media screen and (min-width: 550px) {
         section#main article ul li {
           float: left;
